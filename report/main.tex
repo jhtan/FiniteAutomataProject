@@ -13,15 +13,17 @@
 \normalsize INF - 154 \hfill Jhonatan Ismael Castro Rocabado\\
 Profesora. Madelina Loza Soliz \hfill Fabiola Vanessa Aliaga Salvatierra\\
 Periodo: Curso de Invierno 2016 \hfill Carlos Fernando Torrez Alanoca\\
-\hfill Fecha: 24/7/2016 \\
+\hfill Fecha: 27/7/2016 \\
 
 \section*{Enunciado del Problema}
 Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
 
 \section*{Autómata}
 
-\subsection*{var++, var + var, var+=}
+%%% First Automata
+\subsection*{var++, var + var, var+=} % sub title
 
+% code of the graphic
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.4cm,semithick]
   \tikzstyle{every state}=[fill=none,draw=black,text=black]
 
@@ -46,6 +48,24 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q7) edge node {$\lambda$} (q5);
 \end{tikzpicture}
 
+
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+     & var & + & = & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+    $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+    $q_2$ & $q_3$ & $q_4$ & $q_6$ & 0 \\ \hline
+    $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $q_4$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+    $q_6$ & $q_7$ & 0 & 0 & 0 \\ \hline
+    $q_7$ & 0 & 0 & 0 & $q_5$ \\ \hline
+  \end{tabular}
+\end{center}
+
+%%% Second Automata
 \subsection*{var$--$, var $-$ var, var$-=$}
 
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.4cm,semithick]
