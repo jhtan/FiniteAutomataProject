@@ -15,6 +15,22 @@ Profesora. Madelina Loza Soliz \hfill Fabiola Vanessa Aliaga Salvatierra\\
 Periodo: Curso de Invierno 2016 \hfill Carlos Fernando Torrez Alanoca\\
 \hfill Fecha: 27/7/2016 \\
 
+\section*{Introducción}
+Como vimos en las clases de lenguajes autómatas y formales, podemos asegurar que las gramáticas libres de contexto nos ayudan a la realización de varias aplicaciones como ser: "El lenguaje de las expresiones algebraicas" , "Sintaxis en los lenguajes de programación" , "Reglas Gramaticales en español". En el siguiente proyecto explicaremos de manera más profunda la realización de la primera aplicación:
+"El lenguaje de las expresiones algebraicas".
+
+Para realizar éste proyecto necesitamos saber definiciones básicas de lo que son las gramáticas libres de contexto y en especial el lenguaje que genera una gramática de contexto libre. 
+Un lenguaje importante en la ciencia de la computación es de expresiones algebraicas válidas. Por simplicidad, el análisis se limita aqui a expresiones sencillas que pueden formarse con los operadores binarios: +, -,* y /, además de los signos de abrir y cerrar parentesis, y del identificador único a.
+Por tanto, algunas de las caracteristicas omitidas son los operadores unarios, expresiones relativas a la notación funcional e identificadores más generales.
+Muchas de esas caracteristicas podrían manejarse con mucha mas sencillez.
+Una definición recursiva del lenguaje se basa en la observación que pueden formarse expresiones válidas al unir dos expresiones válidas con uno de los cuatro operadores o encerrar una expresión válida entre parentesis, además de que estas dos operaciones sirven para explicar todas las expresiones válidas, salvo el identificador unico a. Así pues, la forma más directa de obtener una gramática de contexto libre probablemente  sea el uso de las producciones:
+
+S $\rightarrow$ S + S  $|$ S - S  $|$ S * S  $|$ S / S  $|$ (S)
+
+De esa manera pueden evaluarse diversas derivaciones. 
+
+En el siguiente proyecto presentaremos una gramática libre de contexto representado por un autómata finito que evalúa el lenguaje de expresiones algebraicas con su respectiva matriz de transiciones y el código fuente en java Script. 
+
 \section*{Enunciado del Problema}
 Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
 
@@ -630,8 +646,12 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
 \end{center}
 
 Esta información fue obtenida de la documentación ofical de Java. \cite{java}
+\section*{Conclusiones }
+Como una conclusión, la gramática libre de contexto podría no ser la más apropiada. No incluye en forma algunas convenciones estándar relacionadaa con la precedencia de operadores y el orden de evaluación de izquierda a derecha, que se usa para evaluar la expresión. (La precedencia de operadores indica que en la expresión a + b * c, la multiplicación se realiza antes que la suma). 
 
-\begin{thebibliography}{9}
+Por consiguiente, en lugar de verse en la necesidad de elegir entre dos derivaciones de una cadena es aconsejable utilizar una derivación. Siendo así la forma más sencilla de evaluar una expresión algebraica.
+
+\begin{thebibliography}{20}
 \bibitem{java} https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
 \end{thebibliography}
 
