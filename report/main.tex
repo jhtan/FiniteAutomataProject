@@ -92,6 +92,22 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q7) edge node {$\lambda$} (q5);
 \end{tikzpicture}
 
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+     & var & - & = & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+    $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+    $q_2$ & $q_3$ & $q_4$ & $q_6$ & 0 \\ \hline
+    $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $q_4$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+    $q_6$ & $q_7$ & 0 & 0 & 0 \\ \hline
+    $q_7$ & 0 & 0 & 0 & $q_5$ \\ \hline
+  \end{tabular}
+\end{center}
+
 \subsection*{var * var, var*=}
 
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.4cm,semithick]
@@ -114,7 +130,20 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q4) edge node {var} (q6)
   (q6) edge node {$\lambda$} (q5);
 \end{tikzpicture}
-
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+     & var & * & = & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+    $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+    $q_2$ & $q_3$ & 0 & $q_4$ & 0 \\ \hline
+    $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $q_4$ & $q_6$ & 0 & 0 & 0 \\ \hline
+    $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+    $q_6$ & 0 & 0 & 0 &  $q_5$ \\ \hline
+  \end{tabular}
+\end{center}
 \subsection*{var / var, var/=}
 
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.4cm,semithick]
@@ -137,6 +166,20 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q4) edge node {var} (q6)
   (q6) edge node {$\lambda$} (q5);
 \end{tikzpicture}
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+     & var & / & = & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+    $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+    $q_2$ & $q_3$ & 0 & $q_4$ & 0 \\ \hline
+    $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $q_4$ & $q_6$ & 0 & 0 & 0 \\ \hline
+    $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+    $q_6$ & 0 & 0 & 0 &  $q_5$ \\ \hline
+  \end{tabular}
+\end{center}
 
 \subsection*{var \% var, var\%=}
 
@@ -160,6 +203,22 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q4) edge node {var} (q6)
   (q6) edge node {$\lambda$} (q5);
 \end{tikzpicture}
+
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+    & var & \% & = & $\lambda$ \\ \hline \hline
+   $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+   $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+   $q_2$ & $q_3$ & 0 & $q_4$ & 0 \\ \hline
+   $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+   $q_4$ & $q_6$ & 0 & 0 & 0 \\ \hline
+   $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+    $q_6$ & 0 & 0 & 0 &  $q_5$ \\ \hline
+\end{tabular}
+\end{center}
+
 
 \subsection*{var\&\&, var \& var, var\&=}
 
@@ -187,6 +246,23 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q7) edge node {$\lambda$} (q5);
 \end{tikzpicture}
 
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+     & var & \& & = & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+    $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+    $q_2$ & $q_3$ & $q_4$ & $q_6$ & 0 \\ \hline
+    $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $q_4$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+    $q_6$ & $q_7$ & 0 & 0 & 0 \\ \hline
+    $q_7$ & 0 & 0 & 0 & $q_5$ \\ \hline
+  \end{tabular}
+\end{center}
+
+
 \subsection*{var$||$, var $|$ var, var$|$=}
 
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.4cm,semithick]
@@ -213,6 +289,24 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q7) edge node {$\lambda$} (q5);
 \end{tikzpicture}
 
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+   \hline
+    & var & $|$ & = & $\lambda$ \\ \hline \hline
+   $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+   $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+   $q_2$ & $q_3$ & $q_4$ & $q_6$ & 0 \\ \hline
+   $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+   $q_4$ & 0 & 0 & 0 & $q_5$ \\ \hline
+   $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+   $q_6$ & $q_7$ & 0 & 0 & 0 \\ \hline
+    $q_7$ & 0 & 0 & 0 & $q_5$ \\ \hline
+  \end{tabular}
+\end{center}
+
+
+
 \subsection*{var \^{} var, var\^{}=}
 
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.4cm,semithick]
@@ -235,6 +329,22 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q4) edge node {var} (q6)
   (q6) edge node {$\lambda$} (q5);
 \end{tikzpicture}
+
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+     & var & \^{} & = & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+    $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+    $q_2$ & $q_3$ & 0 & $q_4$ & 0 \\ \hline
+    $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $q_4$ & $q_6$ & 0 & 0 & 0 \\ \hline
+    $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+    $q_6$ & 0 & 0 & 0 &  $q_5$ \\ \hline
+ \end{tabular}
+\end{center}
+
 
 \subsection*{var $<$ var, var $<=$ var, var $<<$ var, var $<<=$ var}
 
@@ -262,6 +372,22 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q6) edge node {var} (q7)
   (q7) edge node {$\lambda$} (q5);
 \end{tikzpicture}
+
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+     & var & $<$ & = & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+    $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+    $q_2$ & $q_3$ & $q_4$ & $q_6$ & 0 \\ \hline
+    $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $q_4$ & $q_3$ & 0 &  $q_6$ & 0 \\ \hline
+    $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+    $q_6$ & $q_7$ & 0 & 0 & 0 \\ \hline
+    $q_7$ & 0 & 0 & 0 & $q_5$ \\ \hline
+  \end{tabular}
+\end{center}
 
 \subsection*{var $>$ var, var $>=$ var, var $>>$ var, var $>>=$ var, var $>>>=$ var}
 
@@ -294,6 +420,24 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q7) edge node {$\lambda$} (q5);
 \end{tikzpicture}
 
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+     & var & $>$ & = & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+    $q_1$ & 0 & $q_2$ & 0 & 0 \\ \hline
+    $q_2$ & $q_3$ & $q_4$ & $q_6$ & 0 \\ \hline
+    $q_3$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $q_4$ & $q_3$ & $q_6$ & $q_8$ & 0 \\ \hline
+    $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+    $q_6$ & $q_7$ & 0 & $q_8$ & 0 \\ \hline
+    $q_7$ & 0 & 0 & 0 & $q_5$ \\ \hline
+    $q_8$ &  $q_7$ & 0 & 0 & 0 \\ \hline
+  \end{tabular}
+\end{center}
+ 
+
 \subsection*{var $==$ var, var $!=$ var}
 
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm,semithick]
@@ -314,6 +458,21 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q3) edge node {var} (q4)
   (q4) edge node {$\lambda$} (q5);
 \end{tikzpicture}
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | c | r | }
+    \hline
+     & var & !  & = & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0 & 0 \\ \hline
+    $q_1$ & 0 & $q_2$ &  $q_2$ & 0 \\ \hline
+    $q_2$ & 0 & 0 &  $q_3$ & 0 \\ \hline
+    $q_3$ &  $q_4$ & 0 & 0 & 0 \\ \hline
+    $q_4$ & 0 & 0 & 0 &  $q_5$ \\ \hline
+    $* q_5$ & 0 & 0 & 0 & 0 \\ \hline
+  \end{tabular}
+\end{center}
+
+
 
 \subsection*{$++$var, $+$var}
 
@@ -334,6 +493,21 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q3) edge node {$\lambda$} (q4);
 \end{tikzpicture}
 
+% transition talbe error
+\begin{center}
+  \begin{tabular}{ | l || c | c | r | }
+    \hline
+     & var & +  & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0  & 0 \\ \hline
+    $q_1$  & $q_2$ &  $q_2$ & 0 \\ \hline
+    $q_2$  &  $q_3$  &  $q_3$ & 0 \\ \hline
+    $q_3$ &  $q_4$  & 0 & 0 \\ \hline
+    $*q_4$ & 0  & 0 & 0 \\ \hline
+   
+  \end{tabular}
+\end{center}
+ 
+
 \subsection*{$--$var, $-$var}
 
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,semithick]
@@ -353,6 +527,21 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q3) edge node {$\lambda$} (q4);
 \end{tikzpicture}
 
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | r | }
+    \hline
+     & var & - & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & $q_1$ & 0 & 0  \\ \hline
+    $q_1$ & 0 & $q_2$ & $q_2$  \\ \hline
+    $q_2$ & 0 &  $q_3$  & $q_3$  \\ \hline
+    $q_3$ &  $q_4$  & 0 & 0 \\ \hline
+    $*q_4$ & 0 & 0 & 0 \\ \hline
+   
+  \end{tabular}
+\end{center}
+
+
 \subsection*{$!$ var}
 
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,semithick]
@@ -369,6 +558,20 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q2) edge node {$\lambda$} (q3);
 \end{tikzpicture}
 
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | r | }
+    \hline
+     & var & ! & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & 0 &  $q_1$  & 0 \\ \hline
+    $q_1$ & $q_2$ & 0  & 0 \\ \hline
+    $q_2$ & 0 & 0 & $q_3$ \\ \hline
+    $*q_3$ &  0 & 0 & 0 \\ \hline
+      
+  \end{tabular}
+\end{center}
+
+
 \subsection*{$\sim$ var}
 
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,semithick]
@@ -384,6 +587,19 @@ Realizar un autómata que acepte enunciados de operaciones algebraicas simples.
   (q1) edge node {var} (q2)
   (q2) edge node {$\lambda$} (q3);
 \end{tikzpicture}
+
+% transition talbe
+\begin{center}
+  \begin{tabular}{ | l || c | c | r | }
+    \hline
+     & var & $\sim$ & $\lambda$ \\ \hline \hline
+    $\,\to\, q_0$ & 0 &  $q_1$  & 0 \\ \hline
+    $q_1$ & $q_2$ & 0  & 0 \\ \hline
+    $q_2$ & 0 & 0 & $q_3$ \\ \hline
+    $*q_3$ &  0 & 0 & 0 \\ \hline
+      
+  \end{tabular}
+\end{center}
 
 \subsection*{condition ? statement : statement}
 
