@@ -1,0 +1,33 @@
+body {
+    background-color: #dad7d5;
+}
+
+#title {
+    text-align: center;
+    padding: 50 50 10 50;
+    font-size: 50px;
+}
+
+#container {
+    text-align: center;
+    padding: 20 20 20 20;
+}
+
+#expression {
+    text-align: center;
+    align-content: center;
+    width: 400px;
+    height: 120px;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    line-height: 130%;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+#result {
+    display: block;
+    font-size: 40px;
+    padding: 10 10 10 10;
+    margin-top: 40px;
+}
